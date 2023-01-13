@@ -1,0 +1,214 @@
+.theme {
+  background-color: #2d3134;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: #2d3134;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.boton {
+  position: absolute;
+  top: 95%;
+  left: 47%;
+  height: 30px;
+  width: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #dc4133;
+  transition-duration: 1s;
+  border-color: transparent;
+  color: white;
+  animation-name: aparece;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.displayOn {
+  background-color: #2d3134;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation-name: apareceDisplay;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.displayOn h1 {
+  color: white;
+}
+
+.photo0 {
+  opacity: 1;
+  border: 10px solid white;
+  position: absolute;
+  top: 10%;
+  left: 16%;
+  animation-name: apareceDisplay;
+  animation-delay: 1.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo1 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 8%;
+  left: 12%;
+  transform: rotate(-10deg);
+  animation-name: apareceDisplay;
+  animation-delay: 3s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo2 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 19%;
+  left: 40%;
+  transform: rotate(15deg);
+  animation-name: apareceDisplay;
+  animation-delay: 4.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo3 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  transform: rotate(5deg);
+  animation-name: apareceDisplay;
+  animation-delay: 6s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo4 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: rotate(-5deg);
+  animation-name: apareceDisplay;
+  animation-delay: 7.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo5 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  transform: rotate(-10deg);
+  animation-name: apareceDisplay;
+  animation-delay: 9s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo6 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: rotate(10deg);
+  animation-name: apareceDisplay;
+  animation-delay: 10.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo7 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  transform: rotate(0deg);
+  animation-name: apareceDisplay;
+  animation-delay: 12s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo8 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: rotate(-5deg);
+  animation-name: apareceDisplay;
+  animation-delay: 13.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo9 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  transform: rotate(5deg);
+  animation-name: apareceDisplay;
+  animation-delay: 15s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+.photo10 {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  transform: rotate(0deg);
+  animation-name: apareceDisplay;
+  animation-delay: 16.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes apareceDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes desapareceDisplay {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

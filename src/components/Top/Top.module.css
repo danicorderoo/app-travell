@@ -1,0 +1,19 @@
+.themeNigthf {
+  background-color: rgb(45, 49, 52);
+  transition-duration: 1s;
+}
+
+.themeDayf {
+  background-color: #c3c3c3;
+  transition-duration: 1s;
+}
+
+.cardsf {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}

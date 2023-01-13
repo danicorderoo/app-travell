@@ -1,0 +1,294 @@
+* {
+  font-family: "SIMPLIFICA";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: start;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 182.7px;
+  height: max-content;
+  width: 21.3em;
+  padding: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  animation-name: transladaC;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: reverse;
+  animation-fill-mode: both;
+  padding-bottom: 10px;
+}
+
+.titulo {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.subTitulo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: normal;
+}
+
+.bandera {
+  animation-name: gira;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: reverse;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+
+.bandera img {
+  width: 20.65em;
+  height: 12em;
+}
+
+.themeNigth {
+  background-color: #2d3134;
+  transition-duration: 1s;
+  color: #fff;
+}
+
+.themeDay {
+  background-color: #c3c3c3;
+  transition-duration: 1s;
+  color: black;
+}
+
+@keyframes gira {
+  from {
+    transform: scale(0) translateY(-100px) rotate(0deg) translateY(-500px);
+  }
+  to {
+    transform: scale(1) translateY(0px) rotate(1080deg) translateY(0px);
+  }
+}
+
+@keyframes translada {
+  from {
+    transform: translateY(-150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes transladaC {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-2%);
+    opacity: 1;
+  }
+}
+
+.planeOn {
+  position: absolute;
+  background-image: url(../../assets/plane_on.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 50px;
+  width: 50px;
+  border-color: transparent;
+  background-color: transparent;
+  animation-name: translate;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  top: -30%;
+  left: 45%;
+}
+
+@keyframes translate {
+  0% {
+    transform: rotate(0deg) translate(-40px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-40px) rotate(360deg);
+  }
+}
+
+.planeOff {
+  position: absolute;
+  background-image: url(../../assets/plane_off.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  height: 50px;
+  width: 50px;
+  border-color: transparent;
+  background-color: transparent;
+  animation-name: translateY;
+  animation-delay: 1s;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  top: -20%;
+  left: 40%;
+  transform: rotate(300deg);
+}
+
+@keyframes translate {
+  0% {
+    transform: rotate(0deg) translate(-40px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-40px) rotate(360deg);
+  }
+}
+
+@keyframes translateY {
+  0% {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg) translate(-30px) rotate(-360deg);
+  }
+}
+
+.topText button {
+  font-family: "BrannbollSmal";
+  color: rgb(220, 65, 51);
+  font-size: 1.2em;
+  background-color: transparent;
+  border-color: transparent;
+  animation-name: palpita;
+  animation-delay: 4s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.topText h2 {
+  font-family: "SIMPLIFICA";
+  color: #afe8fd;
+  font-size: 1.2em;
+  animation-name: palpita;
+  animation-delay: 4s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  margin-top: 6%;
+  margin-left: 27%;
+  opacity: 0;
+}
+
+@keyframes palpita {
+  from {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.activityOff {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  padding: 10px;
+  background-color: #2d3134;
+  cursor: pointer;
+  background-position: center center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  bottom: 1vh;
+  right: 1vh;
+  z-index: 2;
+  animation-name: galeria;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transition: 2s;
+}
+
+.activityOn {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  padding: 10px;
+  background-color: #dc4133;
+  cursor: pointer;
+  background-position: center center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  bottom: 2.5vh;
+  right: 0.5vh;
+  z-index: 2;
+  animation-name: galeria;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transition: 2s;
+}
+
+@keyframes galeria {
+  0% {
+    background-image: url(../../assets/Activity/006-life.png);
+  }
+
+  10% {
+    background-image: url(../../assets/Activity/001-tickets.png);
+  }
+  20% {
+    background-image: url(../../assets/Activity/002-diving-mask.png);
+  }
+  30% {
+    background-image: url(../../assets/Activity/003-tent.png);
+  }
+  40% {
+    background-image: url(../../assets/Activity/004-backpack.png);
+  }
+  50% {
+    background-image: url(../../assets/Activity/005-kayak.png);
+  }
+  60% {
+    background-image: url(../../assets/Activity/006-life.png);
+  }
+  70% {
+    background-image: url(../../assets/Activity/007-hot-air-balloon.png);
+  }
+  80% {
+    background-image: url(../../assets/Activity/008-ski-equipment.png);
+  }
+
+  90% {
+    background-image: url(../../assets/Activity/009-virtual.png);
+  }
+  100% {
+    background-image: url(../../assets/Activity/003-tent.png);
+  }
+}

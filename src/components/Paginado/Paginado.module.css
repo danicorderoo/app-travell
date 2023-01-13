@@ -1,0 +1,46 @@
+.mainContainer {
+  width: fit-content;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  margin-left: 15%;
+}
+
+.pagBtn {
+  background-color: rgba(220, 65, 51, 1);
+  border: none;
+  margin: 3px;
+  margin-top: 0.5em;
+  color: white;
+  font-family: "SIMPLIFICA";
+  font-size: 0.77em;
+  height: 3em;
+  width: 5em;
+  border-radius: 10px;
+  transition-duration: 1s;
+}
+
+.pagBtn:hover {
+  background-color: rgba(234, 105, 90, 0.8);
+  transition-duration: 1s;
+  color: #2d3134;
+  cursor: pointer;
+}
+
+.themeDay {
+  font-family: "SIMPLIFICA";
+  color: #2d3134;
+  font-weight: 500;
+  font-size: 2em;
+  margin: 1em;
+  transition-duration: 1s;
+}
+
+.themeNigth {
+  font-family: "SIMPLIFICA";
+  color: #fff;
+  font-weight: 500;
+  font-size: 2em;
+  margin: 1em;
+  transition-duration: 1s;
+}

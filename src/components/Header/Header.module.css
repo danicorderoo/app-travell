@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.go {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  height: 30px;
+  width: 60px;
+  border-radius: 10px;
+  background-color: #dc4133;
+  transition-duration: 1s;
+  border-color: transparent;
+  color: white;
+  animation-name: aparece;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.go:hover {
+  transition-duration: 1s;
+  background-color: rgba(234, 105, 90, 0.8);
+  cursor: pointer;
+  color: #2d3134;
+}
+
+.themeNigth {
+  background-image: url(../../assets/plane_nigth.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 55%;
+  background-color: #2d3134;
+  transition-duration: 1s;
+}
+
+.themeDay {
+  background-image: url(../../assets/plane_day.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 55%;
+  background-color: #c3c3c3;
+  transition-duration: 1s;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-left: 2.5%;
+}
+
+.sloganNigth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.sloganDay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.sloganNigth h1 {
+  font-family: "BrannbollSmal";
+  color: rgb(220, 65, 51);
+  font-size: 4em;
+  animation-name: aparece;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  margin-left: 200px;
+}
+
+.sloganDay h1 {
+  font-family: "BrannbollSmal";
+  color: rgb(220, 65, 51);
+  font-size: 4em;
+  animation-name: aparece;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  margin-left: 200px;
+}
+
+.world {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world 10s linear infinite;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+.world_Oceania {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world_Oceania 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+.world_Asia {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world_Asia 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+.world_Americas {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world_Americas 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+.world_Africa {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world_Africa 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+.world_Europe {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world_Europe 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+.world_Antarctic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world_Antarctic 6s linear infinite;
+  margin-left: 250px;
+  margin-top: -30px;
+}
+
+@keyframes world {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 200%;
+  }
+}
+@keyframes world_Oceania {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 355%;
+  }
+}
+@keyframes world_Asia {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 320%;
+  }
+}
+@keyframes world_Americas {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 200%;
+  }
+}
+@keyframes world_Africa {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 262%;
+  }
+}
+@keyframes world_Europe {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 285%;
+  }
+}
+@keyframes world_Antarctic {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 200%;
+  }
+}
+
+@keyframes movimiento {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes aparece {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

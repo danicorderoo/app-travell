@@ -1,0 +1,43 @@
+.themeNigth {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  width: 40vh;
+  height: 7em;
+  overflow: hidden;
+  gap: 10px;
+  background-color: rgba(220, 65, 51, 0.9);
+  color: #fff;
+  transition-duration: 1s;
+  box-shadow: 0 0 10px #000, -5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.themeNigth:hover {
+  background-color: rgba(220, 65, 51, 0.8);
+  box-shadow: 0 0 10px rgb(232, 136, 11), -10px 10px 50px rgba(220, 65, 51, 0.8);
+}
+
+.themeDay {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  width: 40vh;
+  height: 7em;
+  overflow: hidden;
+  gap: 10px;
+  background-color: rgba(220, 65, 51, 0.4);
+  color: #000;
+  transition-duration: 1s;
+  box-shadow: 0 0 10px #000, -10px 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+.themeDay:hover {
+  background-color: rgba(220, 65, 51, 0.8);
+  box-shadow: 0 0 10px rgb(232, 136, 11), -10px 10px 50px rgba(220, 65, 51, 0.8);
+}

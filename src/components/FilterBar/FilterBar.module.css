@@ -1,0 +1,128 @@
+.theme {
+  color: #2d3134;
+  z-index: 1;
+  bottom: 0;
+  right: 0px;
+  position: fixed;
+}
+
+.theme label {
+  text-align: start;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.theme h3 {
+  text-align: start;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.filtros {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding-right: 15px;
+  height: 23em;
+  width: 16em;
+  background-color: rgba(151, 148, 148, 1);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-color: transparent;
+  animation-name: apareceText;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.filtrosOff {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding-right: 15px;
+  height: 23em;
+  width: 16em;
+  background-color: rgba(151, 148, 148, 1);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-color: transparent;
+  animation-name: desapareceText;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.barra {
+  background-color: #afe8fd;
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 5px;
+}
+
+.orden {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.botonera button {
+  height: 30px;
+  width: 60px;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 10px;
+  background-color: #dc4133;
+  transition-duration: 1s;
+  border-color: transparent;
+  color: white;
+  animation-name: aparece;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botonera button:hover {
+  transition-duration: 1s;
+  background-color: rgba(234, 105, 90, 0.8);
+  cursor: pointer;
+  color: #2d3134;
+}
+
+@keyframes apareceText {
+  0% {
+    transform: translateX(320px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes desapareceText {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(320px);
+  }
+}

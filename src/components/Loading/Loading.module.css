@@ -1,0 +1,98 @@
+.themeNigth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2d3134;
+  transition-duration: 1s;
+}
+.themeDay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c3c3c3;
+  transition-duration: 1s;
+}
+.themeNigth h1 {
+  font-family: "BrannbollSmal";
+  color: rgb(220, 65, 51);
+  font-size: 4em;
+}
+.themeNigth h2 {
+  font-family: "SIMPLIFICA";
+  color: #fff;
+  font-size: 4em;
+}
+.themeDay h1 {
+  font-family: "BrannbollSmal";
+  color: rgb(220, 65, 51);
+  font-size: 4em;
+}
+.themeDay h2 {
+  font-family: "SIMPLIFICA";
+  color: #2d3134;
+  font-size: 4em;
+}
+
+.world {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../../assets/img.png);
+  background-size: cover;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world 2s linear infinite;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.themeNigth .back {
+  text-decoration: none;
+  font-family: "SIMPLIFICA";
+  color: #fff;
+  cursor: pointer;
+  font-size: 2em;
+  margin-top: 10px;
+  transition: 1s;
+}
+
+.themeNigth .back:hover {
+  text-decoration: none;
+  font-family: "SIMPLIFICA";
+  color: rgb(220, 65, 51);
+  cursor: pointer;
+  font-size: 2em;
+  margin-top: 10px;
+  transition: 1s;
+}
+
+.themeDay .back {
+  text-decoration: none;
+  font-family: "SIMPLIFICA";
+  color: #2d3134;
+  cursor: pointer;
+  font-size: 2em;
+  margin-top: 10px;
+  transition: 1s;
+}
+
+.themeDay .back:hover {
+  text-decoration: none;
+  font-family: "SIMPLIFICA";
+  color: rgb(220, 65, 51);
+  cursor: pointer;
+  font-size: 2em;
+  margin-top: 10px;
+  transition: 1s;
+}
+
+@keyframes world {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 200%;
+  }
+}
