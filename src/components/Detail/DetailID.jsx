@@ -31,9 +31,9 @@ export default function DetailID(props) {
 
     if (countrieId) {
       const countrieID = await axios(`/countries/${countrieId}`);
-      setCountrie(countrieID);
+      setCountrie(countrieID.data);
 
-      console.log(countrieID);
+      console.log(countrie);
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
