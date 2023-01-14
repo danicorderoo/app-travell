@@ -30,20 +30,18 @@ export default function DetailID(props) {
     });
 
     if (countrieId) {
-      axios
-        .get(`/countries/${countrieId}`)
-        .then((response) => response.json())
-        .then((countrie) => {
-          if (countrie.nombre) {
-            setCountrie(countrie);
-            dispatch(actions.addCountrieName(countrie.nombre));
-          } else {
-            window.alert("There is no country with that ID");
-          }
-        })
-        .catch((err) => {
+      try {
+        const countries = axios.get(`/countries/${countrieId}`);
+        if (countrie?.nombre) {
+          setCountrie(countrie);
+          dispatch(actions.addCountrieName(countrie.nombre));
+        } else {
           window.alert("There is no country with that ID");
-        });
+        }
+      } catch (error) {
+        console.log(error);
+        window.alert("There is no country with that ID");
+      }
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
