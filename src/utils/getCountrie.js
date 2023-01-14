@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import * as actions from "../redux/actions";
 
-export const addCountrie = (countrieId) => {
+const addCountrie = (countrieId) => {
   let dispatch = useDispatch();
   const [countrie, setCountrie] = useState({});
 
@@ -24,3 +24,5 @@ export const addCountrie = (countrieId) => {
 
   return countrie;
 };
+
+export default addCountrie;
