@@ -11,11 +11,11 @@ export default function SearchBar(props) {
     <div className={theme ? styles.themeDay : styles.themeNigth}>
       <div>
         <h1>Travel5!</h1>
-        <h2>Loading...</h2>
         <div className={styles.world}></div>
         <NavLink
           className={styles.back}
-          to={location.pathname === "/home" ? "/" : "/home"}>
+          to={location.pathname === "/home" ? "/" : "/home"}
+        >
           back
         </NavLink>
       </div>
