@@ -24,8 +24,9 @@ export default function DetailID(props) {
 
   const addCountrie = async () => {
     try {
-      const countrie = await axios.get(`/countries/${countrieId}`);
-      if (countrie?.nombre) {
+      const countrieS = await axios.get(`/countries/${countrieId}`);
+      console.log(countrieS);
+      if (countrieS?.nombre) {
         setCountrie(countrie);
         dispatch(actions.addCountrieName(countrie.nombre));
       } else {
