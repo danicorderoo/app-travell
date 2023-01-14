@@ -122,7 +122,7 @@ export default function Create(props) {
       countries: selectCountrie,
     };
 
-    await axios.post("http://localhost:3001/activities", jsonData);
+    await axios.post("/activities", jsonData);
 
     setActivity({
       nombre: "",
