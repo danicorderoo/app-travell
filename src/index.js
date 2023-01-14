@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://api-travell.onrender.com";
+axios.defaults.baseURL = "https://api-travell.onrender.com/";
 
 ReactDOM.render(
   <Provider store={store}>
