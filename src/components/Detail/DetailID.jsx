@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import styles from "./Detail.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -31,7 +30,7 @@ export default function DetailID(props) {
     });
 
     if (countrieId) {
-      addCountrie(countrieId);
+      setCountrie(addCountrie(countrieId));
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
