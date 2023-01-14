@@ -50,7 +50,7 @@ export const addCountrieName = (name) => {
     }
   };
 };
-addCountrieName;
+
 export const getActivity = () => (dispatch) => {
   return async (dispatch) => {
     try {
