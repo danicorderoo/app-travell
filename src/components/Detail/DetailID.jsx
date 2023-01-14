@@ -22,22 +22,6 @@ export default function DetailID(props) {
   let display = useSelector((state) => state.display);
   const [windowActivity, setWindowActivity] = useState(false);
 
-  const addCountrie = async () => {
-    try {
-      const countrieS = await axios.get(`/countries/${countrieId}`);
-      console.log(countrieS);
-      if (countrieS?.nombre) {
-        setCountrie(countrieS);
-        dispatch(actions.addCountrieName(countrieS.nombre));
-      } else {
-        window.alert("There is no country with that ID");
-      }
-    } catch (error) {
-      console.log(error);
-      window.alert("There is no country with that ID");
-    }
-  };
-
   useEffect(() => {
     favorites.forEach((countrie) => {
       if (countrie.id === countrieId) {
@@ -46,7 +30,21 @@ export default function DetailID(props) {
     });
 
     if (countrieId) {
-      addCountrie();
+      const countrieID = axios(`/countries/${countrieId}`);
+
+      console.log(countrieID);
+      // .then((response) => response.json())
+      // .then((countrie) => {
+      //   if (countrie.nombre) {
+      //     setCountrie(countrie);
+      //     dispatch(actions.addCountrieName(countrie.nombre));
+      //   } else {
+      //     window.alert("There is no country with that ID");
+      //   }
+      // })
+      // .catch((err) => {
+      //   window.alert("There is no country with that ID");
+      // });
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
