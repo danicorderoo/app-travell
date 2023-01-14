@@ -33,18 +33,6 @@ export default function DetailID(props) {
       const countrieID = axios(`/countries/${countrieId}`);
 
       console.log(countrieID);
-      // .then((response) => response.json())
-      // .then((countrie) => {
-      //   if (countrie.nombre) {
-      //     setCountrie(countrie);
-      //     dispatch(actions.addCountrieName(countrie.nombre));
-      //   } else {
-      //     window.alert("There is no country with that ID");
-      //   }
-      // })
-      // .catch((err) => {
-      //   window.alert("There is no country with that ID");
-      // });
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
