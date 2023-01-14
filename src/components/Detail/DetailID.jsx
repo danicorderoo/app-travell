@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import styles from "./Detail.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -10,7 +11,6 @@ import { useDispatch } from "react-redux";
 import * as actions from "../../redux/actions/index";
 import Presentations from "../Presentation/Presentetion";
 import Activity from "../ActivityBar/ActivityBar";
-import addCountrie from "../../utils/getCountrie";
 
 export default function DetailID(props) {
   const { countrieId } = useParams();
@@ -22,6 +22,21 @@ export default function DetailID(props) {
   let display = useSelector((state) => state.display);
   const [windowActivity, setWindowActivity] = useState(false);
 
+  const addCountrie = async () => {
+    try {
+      const countrie = await axios.get(`/countries/${countrieId}`);
+      if (countrie?.nombre) {
+        setCountrie(countrie);
+        dispatch(actions.addCountrieName(countrie.nombre));
+      } else {
+        window.alert("There is no country with that ID");
+      }
+    } catch (error) {
+      console.log(error);
+      window.alert("There is no country with that ID");
+    }
+  };
+
   useEffect(() => {
     favorites.forEach((countrie) => {
       if (countrie.id === countrieId) {
@@ -30,7 +45,7 @@ export default function DetailID(props) {
     });
 
     if (countrieId) {
-      setCountrie(addCountrie(countrieId));
+      addCountrie();
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
