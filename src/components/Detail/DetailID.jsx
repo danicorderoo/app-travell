@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import * as actions from "../../redux/actions/index";
 import Presentations from "../Presentation/Presentetion";
 import Activity from "../ActivityBar/ActivityBar";
+import addCountrie from "../../utils/getCountrie";
 
 export default function DetailID(props) {
   const { countrieId } = useParams();
@@ -30,18 +31,7 @@ export default function DetailID(props) {
     });
 
     if (countrieId) {
-      try {
-        const countries = axios.get(`/countries/${countrieId}`);
-        if (countrie?.nombre) {
-          setCountrie(countrie);
-          dispatch(actions.addCountrieName(countrie.nombre));
-        } else {
-          window.alert("There is no country with that ID");
-        }
-      } catch (error) {
-        console.log(error);
-        window.alert("There is no country with that ID");
-      }
+      addCountrie(countrieId);
     }
   }, [countrieId, dispatch, favorites, props.id]);
 
