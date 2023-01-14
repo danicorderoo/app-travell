@@ -22,7 +22,7 @@ export default function DetailID(props) {
   let display = useSelector((state) => state.display);
   const [windowActivity, setWindowActivity] = useState(false);
 
-  useEffect(() => {
+  useEffect(async () => {
     favorites.forEach((countrie) => {
       if (countrie.id === countrieId) {
         setTop(true);
@@ -30,7 +30,8 @@ export default function DetailID(props) {
     });
 
     if (countrieId) {
-      const countrieID = axios(`/countries/${countrieId}`);
+      const countrieID = await axios(`/countries/${countrieId}`);
+      setCountrie(countrieID);
 
       console.log(countrieID);
     }
