@@ -94,7 +94,7 @@ export default function LandingPage(props) {
             })}
           </div>
           <h4>Daniel Cordero</h4>
-          <h4>PI Countries - Soy Henry</h4>
+          <h4>PI Countries</h4>
         </div>
       ) : (
         <Loading />

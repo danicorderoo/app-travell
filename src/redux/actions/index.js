@@ -25,6 +25,8 @@ export const addAllCountries = () => {
   return async (dispatch) => {
     try {
       const conuntries = await axios.get("/countries");
+      console.log({ conuntries });
+
       dispatch({
         type: ADD_ALL_COUNTRIES,
         payload: conuntries.data,
